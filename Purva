@@ -1,0 +1,22 @@
+using System;
+
+namespace Purva
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the number: ");
+            int i = int.Parse(Console.ReadLine());
+            int sum = 0;
+
+            for (int k = 1; k <= i; k++)
+            {
+                sum = sum + k * k / (k*k*k +1);
+            }
+
+            Console.WriteLine("The sum is: {0}", sum);
+            Console.ReadLine();
+        }
+    }
+}
