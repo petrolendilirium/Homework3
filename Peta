@@ -1,0 +1,33 @@
+using System;
+
+namespace Chetvurta
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //PETA E
+            Console.Write("Enter your number: ");
+            int n = int.Parse(Console.ReadLine());
+            bool flag = false;
+
+            for (int i = 2; i <= Math.Sqrt(n); i++)
+            {
+                if (n % i == 0)
+                {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (flag == true)
+            {
+                Console.WriteLine("The number is not prime.");
+            }
+            else
+            {
+                Console.WriteLine("The number is prime.");
+            }
+        }
+    }
+}
