@@ -1,0 +1,32 @@
+using System;
+
+namespace Shesta
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input the number of numbers: ");
+            int N = int.Parse(Console.ReadLine());
+            Console.Write("Input the number: ");
+            double num = double.Parse(Console.ReadLine());
+            double max = num;
+            double min = num;
+
+            for (int i = 1; i <= N; i++)
+            {
+                Console.Write("Input the number: ");
+                num = double.Parse(Console.ReadLine());
+                if (num > max)
+                {
+                    max = num;
+                }else if (num < min)
+                {
+                    min = num;
+                }
+            }
+
+            Console.WriteLine("The minimum number is {0} and the maximum is {1}", min, max);
+        }
+    }
+}
