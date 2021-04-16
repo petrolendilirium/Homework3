@@ -1,0 +1,29 @@
+using System;
+
+namespace Treta
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter N: ");
+            int n = int.Parse(Console.ReadLine());
+            double num = double.Parse(Console.ReadLine());
+            double max = num;
+            int cnt = 1;
+
+            for (int i = 2; i <= n; i++)
+            {
+                num = double.Parse(Console.ReadLine());
+                if (num > max)
+                {
+                    max = num;
+                    cnt++;
+                }
+            }
+
+            Console.WriteLine("The maximum number is {0} and it's index is {1}.", max, cnt);
+            Console.ReadLine();
+        }
+    }
+}
