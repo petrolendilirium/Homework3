@@ -1,0 +1,43 @@
+using System;
+
+namespace Vtora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double num = 0;
+            double positiveSum = 0;
+            double negativeSum = 0;
+            int pCount = 0;
+            int nCount = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Enter your number: ");
+                num = double.Parse(Console.ReadLine());
+                if (num > 0)
+                {
+                    positiveSum += num;
+                    pCount++;
+                }else
+                {
+                    negativeSum += num;
+                    nCount++;
+                }
+            }
+
+            if (pCount == 10)
+            {
+                Console.WriteLine("There are only positive numbers and their sum is: {0}", positiveSum);
+            }else if (nCount == 10)
+            {
+                Console.WriteLine("There are only negative numbers and their sum is: {0}", negativeSum);
+            }
+            else
+            {
+                Console.WriteLine("The sum of the positive numbers is {0} and the sum of the negative numbers is {1}.", positiveSum, negativeSum);
+            }
+        }
+    }
+}
