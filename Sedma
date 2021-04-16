@@ -1,0 +1,44 @@
+using System;
+
+namespace Sedma
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input the number of grades: ");
+            int n = int.Parse(Console.ReadLine());
+            int cntF = 0;
+            int cntD = 0;
+            int cntC = 0;
+            int cntB = 0;
+            int cntA = 0;
+            int grade = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                grade = int.Parse(Console.ReadLine());
+                if (grade == 3)
+                {
+                    cntD++;
+                }else if (grade == 4)
+                {
+                    cntC++;
+                }else if (grade == 5)
+                {
+                    cntB++;
+                }
+                else if (grade == 6)
+                {
+                    cntA++;
+                }else
+                {
+                    cntF++;
+                }
+            }
+
+            Console.WriteLine("The grades are: F:{0} D:{1} C:{2} B:{3} A:{4}.", cntF, cntD, cntC, cntB, cntA);
+            Console.ReadLine();
+        }
+    }
+}
